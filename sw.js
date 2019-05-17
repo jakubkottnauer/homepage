@@ -26,20 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-31bdb2e579753870ab34.js"
+    "url": "webpack-runtime-e95f7898af05b0e5cb1b.js"
   },
   {
-    "url": "app-906dc88486255486e15f.js"
+    "url": "app-14afcc9484ed05754ed0.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-8ecb54e172472c777e36.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "dda61ede57347a78cb646b16a9ec26f7"
+    "revision": "1da7b3acc270b7b1d6d51b669e4e8431"
   },
   {
-    "url": "styles.52d05be1afde3ac4cdcd.css"
+    "url": "styles.1f4b85f80df6a9dcf4aa.css"
   },
   {
     "url": "1-7c080a8eef4dfa7c24d6.js"
@@ -54,8 +54,11 @@ self.__precacheManifest = [
     "url": "static/d/285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8.json"
   },
   {
+    "url": "static/d/604/path---offline-plugin-app-shell-fallback-a-30-c5a-BawJvyh36KKFwbrWPg4a4aYuc8.json"
+  },
+  {
     "url": "manifest.webmanifest",
-    "revision": "b12a409f814a98bc699bb7a039b10306"
+    "revision": "ef9b93c7257ba9e7346e5cced95a1bcc"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -76,7 +79,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/homepage/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -148,7 +151,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `${pathname}`
+        return `/homepage${pathname}`
       } else {
         return pathname
       }
