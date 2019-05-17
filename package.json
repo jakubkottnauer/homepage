@@ -1,14 +1,14 @@
 {
   "name": "gatsby-starter-identity",
   "version": "0.0.1",
-  "description": "Gatsby.js V2 starter template based on Identity by HTML5 UP",
+  "description": "Personal website",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-identity.git"
   },
   "author": {
-    "name": "Anubhav Srivastava",
-    "email": "anubhav.srivastava00@gmail.com"
+    "name": "Jakub Kottnauer",
+    "email": "jk@jakubkottnauer.com"
   },
   "dependencies": {
     "gatsby": "^2.4.3",
