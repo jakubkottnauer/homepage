@@ -11,9 +11,9 @@
     "email": "jk@jakubkottnauer.com"
   },
   "dependencies": {
-    "gatsby": "^2.4.3",
+    "gatsby": "^2.7.1",
     "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-offline": "^2.1.0",
+    "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
     "node-sass": "^4.12.0",
@@ -24,7 +24,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "npm run clean && gatsby build",
-    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "npm run clean && gatsby build && gh-pages -d public",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write '**/*.js'",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
-    "prettier": "^1.17.0",
+    "prettier": "^1.17.1",
     "rimraf": "^2.6.3"
   },
   "keywords": [
